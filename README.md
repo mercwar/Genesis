@@ -4,9 +4,8 @@
 # ⚡ GENESIS — Native x64 Windows Background Service & Installer ⚡
 ### *MERCWAR AI Presents — Lightweight, Zero-Bloat Windows Service Deployment in Pure C*
 
-[![MERCWAR AI](https://shields.io)](https://github.com)
-[![Platform](https://shields.io)](https://github.com)
-[![Language](https://shields.io)](https://github.com)
+[![MERCWAR AI](images/g1.png)
+
 
 **Self-Contained Background Service Deployment for Modern Windows.**  
 *Embeds a signed x64 service DLL inside a native Win32 progress installer with UAC elevation, automated `System32` extraction, dedicated `Svchost` registration, and Session 0 desktop notifications.*
@@ -24,6 +23,7 @@ Instead of relying on external runtime frameworks, MSI packages, or bloated setu
 ---
 
 ## ✨ Key Features
+[![Platform](images/g2.png)
 
 * **Single-File Resource Bundling (`RCDATA`):** Embeds `Genesis.dll` and `eclipse.ico` directly into `Genesis.exe` via Windows resource scripts (`.rc`).
 * **Native Win32 GUI Progress Dialog:** Displays a clean, modeless Windows progress bar (`PROGRESS_CLASSA`) with real-time byte-copy counters, step-by-step status labels, error highlighting (`PBST_ERROR`), and an **Exit** button upon completion.
@@ -35,7 +35,7 @@ Instead of relying on external runtime frameworks, MSI packages, or bloated setu
 ---
 
 ## 📁 Project Structure
-
+[![Language](images/g3.png)
 ```text
 Genesis/
 ├── Genesis.c              # Core x64 Service DLL (ServiceMain, CtrlHandler, WTS desktop notify)
@@ -70,6 +70,8 @@ Sign bin\Genesis.dll with your code-signing certificate (signtool.exe) so svchos
 Run build_launcher.bat to pack eclipse.ico and the signed bin\Genesis.dll into obj\launcher.res and link bin\Genesis.exe.
 
 ⚙️ Installation & Service Management
+
+[![Language](images/g4.png)
 
 1. Install & Start:
 Double-click bin\Genesis.exe (or run from Command Prompt). Approve the UAC prompt to automatically deploy %SystemRoot%\System32\Genesis.dll and start the Genesis service.
