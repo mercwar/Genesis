@@ -18,9 +18,7 @@
 *Embeds a signed x64 service DLL inside a native Win32 progress installer with UAC elevation, automated `System32` extraction, dedicated `Svchost` registration, and Session 0 desktop notifications.*
 
 [![MERCWAR AI](images/g1.png)](images/g1.png)
-[![Platform](images/g2.png)](images/g2.png)
-[![Language](images/g3.png)](images/g3.png)
-[![Service](images/g4.png)](images/g4.png)
+
 
 </div>
 
@@ -35,6 +33,7 @@ Instead of relying on external runtime frameworks, MSI packages, or heavy setup 
 ---
 
 ## ✨ Key Features
+[![Platform](images/g2.png)](images/g2.png)
 
 - **Single-File Resource Bundling (`RCDATA`):** Embeds `Genesis.dll` and `eclipse.ico` directly into `Genesis.exe` using Windows resource definitions (`.rc` / `resource.h`).
 - **Native Win32 GUI Progress Dialog:** Displays a modeless progress bar (`PROGRESS_CLASSA`) with byte-copy progress, status text, error states (`PBST_ERROR`), and an **Exit** action on completion.
@@ -64,3 +63,55 @@ Genesis/
 ├── launcher.c             # Win32 GUI installer (UAC, progress bar, SCM, registry)
 ├── launcher.rc            # Resource script embedding eclipse.ico and Genesis.dll
 └── resource.h             # Resource IDs (IDI_APP_ICON, IDR_GENESIS_DLL)
+
+```
+
+---
+
+## 🛠️ Building from Source
+[![Language](images/g3.png)](images/g3.png)
+
+### Prerequisites
+
+* **OS:** Windows 10 or Windows 11 (x64)
+* **Toolchain:** Visual Studio 2019 / 2022 or Build Tools with MSVC x64 (`cl.exe`) and Resource Compiler (`rc.exe`)
+* **Code Signing:** A code-signing certificate and `signtool.exe` if signing `Genesis.dll` prior to embedding into `Genesis.exe`
+
+### Build Steps
+
+1. **Compile `Genesis.dll`:** Run your DLL build script (`build.bat` / `build_dll.bat`) to initialize the MSVC x64 environment and output `bin\Genesis.dll`.
+2. **Sign `Genesis.dll`:** Sign `bin\Genesis.dll` with `signtool.exe` so `svchost.exe` loads it cleanly under modern Windows service security policies.
+3. **Compile `Genesis.exe`:** Run `build_launcher.bat` to compile `eclipse.ico` and the embedded DLL into `obj\launcher.res` and link `bin\Genesis.exe`.
+
+---
+
+## ⚙️ Installation & Service Management
+[![Service](images/g4.png)](images/g4.png)
+### 1. Install and Start
+
+Run `bin\Genesis.exe` from Explorer or Command Prompt and approve the UAC prompt to deploy `%SystemRoot%\System32\Genesis.dll`, register the service, and start `Genesis`.
+
+### 2. Check Service Status
+
+```bat
+sc query Genesis
+
+```
+
+### 3. Stop or Remove Service
+
+```bat
+sc stop Genesis
+sc delete Genesis
+
+```
+
+---
+
+**MERCWAR AI** • Build • Automate • Innovate
+
+*Native Windows Systems Engineering & Automation*
+
+© 2026 CVBGOD Systems / MERCWAR Integration Team. All Rights Reserved.
+
+Unauthorized use, duplication, or distribution is strictly prohibited.
