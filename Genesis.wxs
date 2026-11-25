@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="Genesis"
+           Manufacturer="Mercwar"
+           Version="1.0.4.0"
+           UpgradeCode="{8D9A5FA6-5545-40F6-B11E-C6434947A346}"
+           Scope="perMachine">
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+
+    <MediaTemplate EmbedCab="yes" />
+
+    <Icon Id="GenesisIcon" SourceFile="eclipse.ico" />
+    <Property Id="ARPPRODUCTICON" Value="GenesisIcon" />
+
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="INSTALLFOLDER" Name="Genesis">
+        <Component Id="GenesisDllComponent" Guid="*">
+          <File Id="GenesisDllFile"
+                Name="Genesis.dll"
+                Source="Genesis.dll"
+                KeyPath="yes" />
+        </Component>
+      </Directory>
+    </StandardDirectory>
+
+    <Feature Id="MainFeature" Title="Genesis" Level="1">
+      <ComponentRef Id="GenesisDllComponent" />
+    </Feature>
+  </Package>
+</Wix>
