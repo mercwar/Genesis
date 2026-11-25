@@ -1,14 +1,24 @@
-
+#### ⚙️ GENESIS
+##### 💥 Native x64 Windows Background Service & Installer!
 <div align="center">
 
-# ⚡ GENESIS — Native x64 Windows Background Service & Installer ⚡
-### *MERCWAR AI Presents — Lightweight, Zero-Bloat Windows Service Deployment in Pure C*
+<a target="_self" title="CLICK HERE to ENTER the GATEWAY FREE!" href="https://mercwar.github.io/Constellation/index.html">
+  <img
+    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/refs/heads/main/Version%207/image_d2a07390.png"
+    alt="Mercwar Constellation Gateway"
+    width="100%"
+  />
+</a>
+
+<br/>
+<div align="center">
+
+**Self-Contained Background Service Deployment for Modern Windows.**  
+*Embeds a signed x64 service DLL inside a native Win32 progress installer with UAC elevation, automated `System32` extraction, dedicated `Svchost` registration, and Session 0 desktop notifications.*
 
 [![MERCWAR AI](images/g1.png)
 
 
-**Self-Contained Background Service Deployment for Modern Windows.**  
-*Embeds a signed x64 service DLL inside a native Win32 progress installer with UAC elevation, automated `System32` extraction, dedicated `Svchost` registration, and Session 0 desktop notifications.*
 
 </div>
 
