@@ -37,6 +37,9 @@
     <loc>https://github.com/mercwar/Genesis/blob/main/launcher.rc</loc>
   </url>
   <url>
+    <loc>https://github.com/mercwar/Genesis/blob/main/_config.yml</loc>
+  </url>
+  <url>
     <loc>https://github.com/mercwar/Genesis/blob/main/build_launcher.bat</loc>
   </url>
   <url>
@@ -47,6 +50,9 @@
   </url>
   <url>
     <loc>https://github.com/mercwar/Genesis/blob/main/sitemap.xml</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/Genesis/blob/main/.gitmodules</loc>
   </url>
   <url>
     <loc>https://github.com/mercwar/Genesis/blob/main/launcher.c</loc>
