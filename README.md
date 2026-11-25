@@ -95,6 +95,21 @@ Use code with caution.
 MERCWAR AI • Build • Automate • Innovate
 Native Windows Systems Engineering & Automation
 </div>
-```Would you like me to also generate:
-• A .gitignore file so temporary build logs and .obj/.res files stay out of mercwar/Genesis
-• Or a single push_genesis.bat script to commit and push this README.md and your source files to GitHub?
+
+### 📜 All files and repositories
+
+<div align="left">
+
+---
+
+<p style="color: #66ccff; letter-spacing: 2px; font-weight: bold; margin-bottom: 4px;">
+  &copy; 2026 CVBGOD Systems / MERCWAR Integration Team
+</p>
+<p style="color: #ffd700; font-size: 13px; letter-spacing: 1px; margin: 2px 0;">
+  All Rights Reserved.
+</p>
+<p style="color: #999999; font-size: 12px; margin-top: 4px;">
+  Unauthorized use, duplication, or distribution is strictly prohibited.
+</p>
+
+</div>
